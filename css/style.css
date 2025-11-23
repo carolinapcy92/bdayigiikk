@@ -1,0 +1,566 @@
+:root {
+    --soft-pink: #ffd7e9;
+    --accent-pink: #ff8ecf;
+    --bubble-blue: #bfe8ff;
+    --lavender: #e6d7ff;
+    --cream: #fff7ec;
+    --text: #333;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Quicksand', sans-serif;
+    background: linear-gradient(135deg, var(--soft-pink), #fff0f6);
+    color: var(--text);
+    margin: 0;
+}
+
+/* BUTTON */
+.btn {
+    display: inline-block;
+    padding: 10px 16px;
+    border-radius: 12px;
+    background: var(--accent-pink);
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    box-shadow: 0 6px 14px rgba(255, 140, 170, 0.18);
+}
+
+/* ===========================
+      SCRAPBOOK (CARD PAGE)
+   =========================== */
+
+.scrapbook-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    width: 90%;
+    margin: 0 auto;
+    padding-top: 20px;
+}
+
+.scrap-photo {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    animation: bounce 2s infinite ease-in-out;
+}
+
+@keyframes bounce {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-8px);
+    }
+}
+
+/* ===========================
+      SCRAPBOOK PAGE (GALLERY)
+   =========================== */
+
+.scrapbook-page {
+    max-width: 980px;
+    margin: 30px auto;
+    padding: 20px;
+}
+
+.scrap-header {
+    text-align: center;
+}
+
+.polaroid-area {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px;
+    justify-content: center;
+    padding: 30px;
+}
+
+.polaroid {
+    width: 160px;
+    background: #fff;
+    border-radius: 12px;
+    padding: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+    transform: rotate(-6deg);
+    transition: transform .28s ease;
+}
+
+.polaroid.extra {
+    transform: rotate(6deg);
+}
+
+.polaroid img {
+    width: 100%;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.polaroid .caption {
+    text-align: center;
+    margin-top: 8px;
+    color: var(--accent-pink);
+    font-weight: 600;
+}
+
+.polaroid:hover {
+    transform: scale(1.02) rotate(0);
+}
+
+.actions {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.note {
+    opacity: 0.7;
+    text-align: center;
+    margin-top: 10px;
+}
+
+/* ===========================
+            CARD
+   =========================== */
+
+.card-page {
+    display: flex;
+    min-height: 80vh;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-inner {
+    width: 360px;
+    background: linear-gradient(180deg, #fff5fb, #fff0f8);
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+    text-align: center;
+}
+
+.card-photo {
+    width: 200px;
+    height: 200px;
+    border-radius: 12px;
+    background: linear-gradient(90deg, var(--bubble-blue), var(--lavender));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px auto;
+}
+
+.photo-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: .3s ease;
+    z-index: 999;
+}
+
+.photo-modal.show {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.photo-modal img {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 12px;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+
+.btn-open {
+    margin-top: 12px;
+}
+
+.hidden {
+    display: none;
+}
+
+.message-text {
+    color: #b94483;
+}
+
+/* ===========================
+        SURPRISE PAGE
+   =========================== */
+
+.surprise-page {
+    max-width: 980px;
+    margin: 0 auto;
+    padding: 40px;
+}
+
+.hero {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.big {
+    font-size: 36px;
+    color: var(--accent-pink);
+    margin: 0;
+}
+
+.photos .photo-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px;
+    justify-content: center;
+    padding: 20px 0;
+}
+
+.p {
+    width: 200px;
+    height: 140px;
+    background-size: cover;
+    border-radius: 12px;
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08);
+}
+
+.quote {
+    padding: 40px;
+    text-align: center;
+}
+
+.qtext {
+    font-size: 20px;
+    color: #a63b7a;
+}
+
+/* CAKE */
+
+.cake-area {
+    text-align: center;
+    padding: 40px;
+}
+
+.cake-wrap {
+    display: flex;
+    justify-content: center;
+}
+
+.cake {
+    position: relative;
+    width: 240px;
+    height: 260px;
+}
+
+/* ============================
+      COLORFUL CUTE CAKE 3 LAYER
+   ============================ */
+
+.cake-area {
+    text-align: center;
+    padding: 40px;
+}
+
+.cake-wrap {
+    display: flex;
+    justify-content: center;
+}
+
+.cake {
+    position: relative;
+    width: 240px;
+    height: 240px;
+}
+
+/* ===== LAYERS ===== */
+.cake .layer {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    border-radius: 18px;
+}
+
+/* Bottom layer */
+.cake .l3 {
+    bottom: 0;
+    height: 75px;
+    width: 200px;
+    background: linear-gradient(90deg, #ffbfd9, #ffe2ff, #ffd4c9);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+/* Middle layer */
+.cake .l2 {
+    bottom: 55px;
+    height: 65px;
+    width: 170px;
+    background: linear-gradient(90deg, #fff0a8, #ffd8f7, #cafff0);
+}
+
+/* Top layer */
+.cake .l1 {
+    bottom: 105px;
+    height: 55px;
+    width: 145px;
+    background: linear-gradient(90deg, #d7f0ff, #ffeef6, #e3ffd4);
+}
+
+/* Cute icing */
+.cake .icing {
+    position: absolute;
+    top: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 180px;
+    height: 28px;
+    border-radius: 14px;
+    background: linear-gradient(90deg, #fff, #ffe6f5);
+    box-shadow: 0 4px 10px rgba(255, 200, 230, 0.4);
+}
+
+/* ============================
+        NUMBER CANDLES (19)
+   ============================ */
+
+.number-candles {
+    position: absolute;
+    top: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 14px;
+    /* jarak lebih rapi */
+}
+
+.num {
+    position: relative;
+    font-size: 34px;
+    font-weight: 900;
+    color: #ff66b7;
+    text-shadow:
+        0 2px 4px rgba(0, 0, 0, 0.15),
+        0 0 10px rgba(255, 150, 200, 0.5);
+}
+
+/* TWO FLAMES ONLY */
+.flame {
+    position: absolute;
+    top: -18px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 14px;
+    height: 18px;
+    border-radius: 50%;
+    background: radial-gradient(circle at 40% 30%, #fff7b1, #ff8b4d);
+    animation: flameMove 0.9s infinite ease-in-out;
+    filter: drop-shadow(0 0 8px #ffbb66);
+}
+
+/* flame animation */
+@keyframes flameMove {
+
+    0%,
+    100% {
+        transform: translateX(-50%) scale(1);
+    }
+
+    50% {
+        transform: translateX(-50%) scale(1.15);
+    }
+}
+
+/* ============================
+          SPARKLE EFFECT
+   ============================ */
+
+.sparkle {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background: radial-gradient(circle, #fff 30%, rgba(255, 255, 255, 0) 70%);
+    border-radius: 50%;
+    opacity: 0;
+    animation: sparkleFlash 1.8s infinite ease-in-out;
+}
+
+.sparkle.s1 {
+    top: 20px;
+    left: 30px;
+    animation-delay: 0s;
+}
+
+.sparkle.s2 {
+    top: 10px;
+    right: 40px;
+    animation-delay: .4s;
+}
+
+.sparkle.s3 {
+    top: 70px;
+    right: 20px;
+    animation-delay: .8s;
+}
+
+.sparkle.s4 {
+    top: 90px;
+    left: 10px;
+    animation-delay: 1.2s;
+}
+
+@keyframes sparkleFlash {
+
+    0%,
+    100% {
+        opacity: 0;
+        transform: scale(.5);
+    }
+
+    50% {
+        opacity: 1;
+        transform: scale(1.3);
+    }
+}
+
+/* Flame Animation */
+
+@keyframes flameFlicker {
+
+    0%,
+    100% {
+        transform: translateX(-50%) scale(1);
+        opacity: 1;
+    }
+
+    50% {
+        transform: translateX(-50%) scale(1.2);
+        opacity: 0.85;
+    }
+}
+
+
+/* FINAL PAGE */
+.final {
+    padding: 40px;
+    text-align: center;
+}
+
+/* RESPONSIVE */
+@media (max-width:600px) {
+    .polaroid {
+        width: 140px;
+    }
+
+    .p {
+        width: 120px;
+        height: 90px;
+    }
+
+    .card-inner {
+        width: 92%;
+    }
+
+    .cake {
+        transform: scale(0.85);
+    }
+
+    /* ===========================
+STICKER BUTTON + LABEL
+=========================== */
+
+
+    .open-label {
+        text-align: center;
+        font-weight: 700;
+        font-size: 18px;
+        color: var(--accent-pink);
+        margin-bottom: 6px;
+        text-shadow: 0 2px 8px rgba(255, 120, 170, 0.35);
+        letter-spacing: 1px;
+    }
+
+
+    .open-sticker {
+        display: block;
+        width: 150px;
+        height: auto;
+        margin: 12px auto;
+        cursor: pointer;
+        user-select: none;
+        animation: wiggle 1.4s infinite ease-in-out;
+        filter: drop-shadow (0 8px 18px rgba);
+        filter: drop-shadow (0 8px 18px rgba(0, 0, 0, 0.25));
+    }
+
+    /* ===== CUTE MUSIC BUTTON ===== */
+    .music-btn {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        width: 55px;
+        height: 55px;
+        background: #ffb7eb;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        box-shadow: 0 0 15px rgba(255, 120, 200, 0.5);
+        animation: floaty 3s ease-in-out infinite;
+        transition: 0.3s;
+        z-index: 999;
+    }
+
+    .music-btn:hover {
+        transform: scale(1.1);
+        box-shadow: 0 0 20px rgba(255, 100, 200, 0.7);
+    }
+
+    .music-btn .icon {
+        font-size: 24px;
+        animation: wiggle 1.5s infinite ease-in-out;
+    }
+
+    /* when playing music */
+    .music-btn.playing {
+        background: #ff70d0;
+        box-shadow: 0 0 20px rgba(255, 60, 160, 0.8);
+    }
+
+    @keyframes floaty {
+
+        0%,
+        100% {
+            transform: translateY(0);
+        }
+
+        50% {
+            transform: translateY(-8px);
+        }
+    }
+
+    @keyframes wiggle {
+
+        0%,
+        100% {
+            transform: rotate(0deg);
+        }
+
+        50% {
+            transform: rotate(12deg);
+        }
+    }
+}

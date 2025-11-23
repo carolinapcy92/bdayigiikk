@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Surprise — Smooth Scroll</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="music-btn" id="musicToggle">
+        <span class="icon">🎵</span>
+    </div>
+
+    <audio id="bgMusic" loop src="audio/music.mp3"></audio>
+    <button id="musicToggle" class="music-toggle">Play ♪</button>
+
+
+    <main class="surprise-page">
+        <section class="hero">
+            <h1 class="big">Surprise for uuuu cihuy</h1>
+            <p class="intro">A little story abt u & us. go scroll down bbg</p>
+        </section>
+
+
+        <section class="photos">
+            <h2>our memories nich xixix</h2>
+            <div class="photo-row">
+                <div class="p" style="background-image:url('images/foto1.jpg')" onclick="openPhoto('images/foto1.jpg')">
+                </div>
+                <div class="p" style="background-image:url('images/foto4.jpg')" onclick="openPhoto('images/foto4.jpg')">
+                </div>
+                <div class="p" style="background-image:url('images/foto7.jpg')" onclick="openPhoto('images/foto7.jpg')">
+                </div>
+                <div class="p" style="background-image:url('images/foto8.jpg')" onclick="openPhoto('images/foto8.jpg')">
+                </div>
+                <div class="p" style="background-image:url('images/foto9.jpg')" onclick="openPhoto('images/foto9.jpg')">
+                </div>
+                <div class="p" style="background-image:url('images/foto10.jpg')"
+                    onclick="openPhoto('images/foto10.jpg')"></div>
+                <div class="p" style="background-image:url('images/foto2.jpg')" onclick="openPhoto('images/foto2.jpg')">
+                </div>
+                <div class="p" style="background-image:url('images/foto3.jpg')" onclick="openPhoto('images/foto3.jpg')">
+                </div>
+                <div class="p" style="background-image:url('images/foto5.jpg')" onclick="openPhoto('images/foto5.jpg')">
+                </div>
+                <div class="p" style="background-image:url('images/foto6.jpg')" onclick="openPhoto('images/foto6.jpg')">
+                </div>
+                <div class="p" style="background-image:url('images/foto11.jpg')"
+                    onclick="openPhoto('images/foto11.jpg')"></div>
+                <div class="p" style="background-image:url('images/foto12.jpg')"
+                    onclick="openPhoto('images/foto12.jpg')"></div>
+                <div class="p" style="background-image:url('images/foto12.jpg')"
+                    onclick="openPhoto('images/foto12.jpg')"></div>
+                <div class="p" style="background-image:url('images/foto13.jpg')"
+                    onclick="openPhoto('images/foto13.jpg')"></div>
+                <div class="p" style="background-image:url('images/foto14.jpg')"
+                    onclick="openPhoto('images/foto14.jpg')"></div>
+                <div class="p" style="background-image:url('images/foto15.jpg')"
+                    onclick="openPhoto('images/foto15.jpg')"></div>
+                <div class="p" style="background-image:url('images/foto16.jpg')"
+                    onclick="openPhoto('images/foto16.jpg')"></div>
+                <div class="p" style="background-image:url('images/foto17.jpg')"
+                    onclick="openPhoto('images/foto17.jpg')"></div>
+                <div class="p" style="background-image:url('images/foto18.jpg')"
+                    onclick="openPhoto('images/foto18.jpg')"></div>
+                <div class="p" style="background-image:url('images/foto19.jpg')"
+                    onclick="openPhoto('images/foto19.jpg')"></div>
+                <div class="p" style="background-image:url('images/foto20.jpg')"
+                    onclick="openPhoto('images/foto20.jpg')"></div>
+                <div class="p" style="background-image:url('images/foto21.jpg')"
+                    onclick="openPhoto('images/foto21.jpg')"></div>
+                <div class="p" style="background-image:url('images/foto22.jpg')"
+                    onclick="openPhoto('images/foto22.jpg')"></div>
+                <div class="p" style="background-image:url('images/foto23.jpg')"
+                    onclick="openPhoto('images/fot023.jpg')"></div>
+                <div class="p" style="background-image:url('images/foto24.jpg')"
+                    onclick="openPhoto('images/foto24.jpg')"></div>
+                <div class="p" style="background-image:url('images/foto25.jpg')"
+                    onclick="openPhoto('images/foto25.jpg')"></div>
+                <div class="p" style="background-image:url('images/foto26.jpg')"
+                    onclick="openPhoto('images/foto26.jpg')"></div>
+                <div class="p" style="background-image:url('images/foto27.jpg')"
+                    onclick="openPhoto('images/foto27.jpg')"></div>
+                <div class="p" style="background-image:url('images/foto28.jpg')"
+                    onclick="openPhoto('images/foto28.jpg')"></div>
+                <div class="p" style="background-image:url('images/foto29.jpg')"
+                    onclick="openPhoto('images/foto29.jpg')"></div>
+
+            </div>
+        </section>
+
+        <script>
+            function openPhoto(src) {
+                const modal = document.getElementById("photoModal");
+                const img = document.getElementById("modalImg");
+                img.src = src;
+                modal.classList.add("show");
+            }
+
+            function closePhoto() {
+                document.getElementById("photoModal").classList.remove("show");
+            }
+        </script>
+
+
+        <section class="quote">
+            <h2>dah yh segitu aza</h2>
+            <p class="qtext">btw youre softie. youre kind. youre funny, youre my favorite. pls dont go bald</p>
+        </section>
+
+
+        <section class="cake-area">
+            <h2>Make a wish ceffat ✨</h2>
+            <div class="cake-area">
+                <div class="cake-wrap">
+                    <div class="cake">
+                        <!-- LAYERS -->
+                        <div class="layer l3"></div>
+                        <div class="layer l2"></div>
+                        <div class="layer l1"></div>
+                        <div class="icing"></div>
+
+                        <!-- NUMBER CANDLES -->
+                        <div class="number-candles">
+                            <div class="num">1 <div class="flame"></div>
+                            </div>
+                            <div class="num">9 <div class="flame"></div>
+                            </div>
+                        </div>
+
+                        <!-- SPARKLES -->
+                        <div class="sparkle s1"></div>
+                        <div class="sparkle s2"></div>
+                        <div class="sparkle s3"></div>
+                        <div class="sparkle s4"></div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+
+        <section class="final">
+            <h2>Happy 19th!</h2>
+            <h2>yahahaha tuwa</h2>
+            <p class="final-note">Thanks for being u! mwah mwah 💗</p>
+            <div class="final-actions">
+                <a href="bdaycard.html" class="btn">Open ur card again</a>
+                <a href="index.html" class="btn">Back to Scrapbook</a>
+            </div>
+        </section>
+
+
+    </main>
+
+
+    <script src="js/script.js"></script>
+</body>
+<div id="photoModal" class="photo-modal" onclick="closePhoto()">
+    <img id="modalImg">
+</div>
+
+
+</html>
